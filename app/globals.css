@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* 
+  Tailwind CSS v4 ನಲ್ಲಿ ಥೀಮ್ ಕಸ್ಟಮೈজ್ ಮಾಡಲು 
+  (ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಹಳೆಯದಾಗಿದ್ದರೆ, ಕೆಳಗಿನ @theme ಬ್ಲಾಕ್ ತೆಗೆದುಹಾಕಿ, ಬದಲಿಗೆ tailwind.config.js ಬಳಸಿ)
+*/
+@theme {
+  --color-brand-blue: #0B1B3D;
+  --color-brand-red: #D32F2F;
+  --color-brand-yellow: #FBC02D;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ಗ್ಲೋಬಲ್ ಬೇಸಿಕ್ ಸ್ಟೈಲ್ಸ್ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-800 antialiased overflow-x-hidden;
+    font-family: var(--font-sans);
+  }
+
+  /* ಸ್ಕ್ರಾಲ್ ಬಾರ್ ಸ್ಟೈಲ್ (Scrollbar) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #0B1B3D; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D32F2F; 
+  }
+}
+
+/* ಕಸ್ಟಮ್ ಯುಟಿಲಿಟಿ ಕ್ಲಾಸ್‌ಗಳು */
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#FBC02D] to-[#D32F2F];
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+}
