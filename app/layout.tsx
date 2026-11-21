@@ -1,20 +1,30 @@
-import './globals.css'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+// app/layout.tsx
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-export const metadata = {
-  title: 'PowerTech Buildcare | Home Maintenance & Building Solutions',
-  description: 'Expert Electrical, Plumbing, Gas Pipeline, Waterproofing & Home Design Services in Puttur, D.K.',
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }) {
+export const metadata: Metadata = {
+  title: "PowerTech Buildcare | Home Maintenance & Building Solutions",
+  description: "Expert Electrical, Plumbing, Gas Pipeline, Waterproofing & Home Design Services in Puttur, D.K.",
+};
+
+// ಇಲ್ಲಿ children ಗೆ React.ReactNode ಎಂದು ಟೈಪ್ (Type) ನೀಡಲಾಗಿದೆ
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-gray-50 text-gray-800">
+      <body className={`${inter.className} bg-gray-50 text-gray-800`}>
         <Navbar />
         {children}
         <Footer />
       </body>
     </html>
-  )
+  );
 }
