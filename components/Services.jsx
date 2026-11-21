@@ -8,7 +8,7 @@ import Image from 'next/image';
 const services = [
   { title: "Electrical Work", image: "/elect.png", desc: "Safe wiring, rewiring, switchboards & CCTV installation." },
   { title: "Plumbing Services", image: "/plumb.png", desc: "Leak detection, pipe installation, bathroom & kitchen plumbing." },
-  { title: "Gas Pipeline", image: "/gas.png", desc: "100% safe, BIS approved gas pipeline installation & maintenance." },
+  { title: "Gas Pipeline", image: "/Gas.png", desc: "100% safe, BIS approved gas pipeline installation & maintenance." },
   { title: "Waterproofing", image: "/water.png", desc: "Roof, terrace, bathroom, and exterior wall waterproofing solutions." },
   { title: "Design & Build", image: "/design.png", desc: "Architectural design, 3D visualization, and Vastu compliant layouts." },
   { title: "Carpentry & POP", image: "/carpop.png", desc: "False ceiling (POP), fiber doors, windows, and custom carpentry." },
