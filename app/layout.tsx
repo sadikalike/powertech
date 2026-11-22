@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import FloatingButtons from "../components/FloatingButtons"; // <-- ಇದನ್ನು ಸೇರಿಸಿ
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,6 @@ export const metadata: Metadata = {
   description: "Expert Electrical, Plumbing, Gas Pipeline, Waterproofing & Home Design Services in Puttur, D.K.",
 };
 
-// ಇಲ್ಲಿ children ಗೆ React.ReactNode ಎಂದು ಟೈಪ್ (Type) ನೀಡಲಾಗಿದೆ
 export default function RootLayout({
   children,
 }: {
@@ -24,6 +24,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingButtons /> {/* <-- ಇದನ್ನು ಇಲ್ಲಿ ಸೇರಿಸಿ */}
       </body>
     </html>
   );
